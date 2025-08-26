@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  /*  Default (Light) Theme */
+  :root {
+    --dark-yellow: #b5920b;
+    --pink: #dc262640;
+    --light-pink: #b4580840;
+    --red: #dc2626;
+    --burnt-yellow: #b45808;
+    --purple: #7b38b2;
+    --light-purple: #7b38b240;
+    --green-100: #15a24c40;
+    --green-200: #15a24c;
+    --green-300: #085827;
+    --blue-100: #0608c4;
+    --blue-200: #03045ebf;
+    --blue-300: #03045e;
+    --white: #ffffff;
+    --black-10: #1e1e1e1a;
+    --black-100: #d9d9d9;
+    --black-200: #1e1e1e80;
+    --black-300: #1e1e1e;
+  }
+}
+
+@theme {
+  --color-dark-yellow: var(--dark-yellow);
+  --color-pink: var(--pink);
+  --color-light-pink: var(--light-pink);
+  --color-red: var(--red);
+  --color-burnt-yellow: var(--burnt-yellow);
+  --color-purple: var(--purple);
+  --color-light-purple: var(--light-purple);
+  --color-green-100: var(--green-100);
+  --color-green-200: var(--green-200);
+  --color-green-300: var(--green-300);
+  --color-blue-100: var(--blue-100);
+  --color-blue-200: var(--blue-200);
+  --color-blue-300: var(--blue-300);
+  --color-white: var(--white);
+  --color-black-10: var(--black-10);
+  --color-black-100: var(--black-100);
+  --color-black-200: var(--black-200);
+  --color-black-300: var(--black-300);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: white;
+  color: black;
+}

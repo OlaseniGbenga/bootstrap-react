@@ -1,11 +1,22 @@
+import { MantineProvider } from "@mantine/core";
+import { Provider } from "react-redux";
+import { RouterProvider } from "react-router-dom";
+import { PersistGate } from "redux-persist/integration/react";
+
 import "@/App.css";
-import Shell from "@/component/layout/shell";
+import router from "@/router/routes";
+import { persistor, store } from "@/store/store";
+import { theme, variablesResolver } from "@/utils/mantine-theme";
 
 function App() {
   return (
-    <div className="">
-      <Shell />
-    </div>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <MantineProvider theme={theme} cssVariablesResolver={variablesResolver}>
+          <RouterProvider router={router} />
+        </MantineProvider>
+      </PersistGate>
+    </Provider>
   );
 }
 
